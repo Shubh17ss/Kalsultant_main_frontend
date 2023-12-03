@@ -1,0 +1,92 @@
+.pricing_area_page {
+    width: 100%;
+    min-height: 100vh;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10rem;
+}
+
+.pricing_navbar_container {
+    width: 100%;
+    height: 3.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem 3.5rem;
+}
+
+.user_profile_logo {
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+        radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.pricing_info_container {
+    width: 80%;
+    min-height: 100vh;
+    height: fit-content;
+    padding: 1rem;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: #ffffffee;
+}
+
+.pricing_info_container strong {
+    font-weight: 600;
+    font-size: 56px;
+    filter: contrast(17.8);
+    width: 50%;
+    text-align: center;
+    color: #ffffffda;
+}
+
+
+.pricing_info_container p{
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.pricing_info_container .price_text{
+    margin-top: 0.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#f9f6eecc;
+}
+
+.pricing_info_container button{
+    width: 90%;
+    height: 46px;
+    background-color: #0095ffa6;
+    margin-top: 3rem;
+    color:#ffffffe9;
+    border-radius: 0.5rem;
+}
+
+
+
+@media screen and (max-width:950px) {
+    .pricing_info_container {
+        width: 100%;
+        margin-top: 2rem;
+        color:rgba(255,255,255,0.4);
+    }
+
+    .pricing_info_container strong {
+        font-size: 24px;
+        width: 100%;
+        font-weight: 500;
+    }
+
+    .pricing_navbar_container{
+        padding:0.5rem 1rem;
+    }
+}

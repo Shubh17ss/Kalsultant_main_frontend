@@ -1,0 +1,167 @@
+.services_container{
+    width:100%;
+    min-height: 100vh;
+    height:fit-content;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color:#ffffff;
+}
+
+.services_container strong{
+    font-size: 56px;
+    font-weight: 600;
+    font-weight: 600;
+    font-size: 56px;
+    filter:contrast(21);
+}
+
+.services_container .inner_container{
+    width: 94%;
+    min-height: 80vh;
+    height: fit-content;
+    padding:3rem;
+    background-color: #151315;
+    border-radius: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.services_container .inner_container .left_area{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 55%;
+    height: 80vh;
+}
+
+.services_container .inner_container .left_area strong{
+    font-size: 48px;
+    font-weight: 600;
+    filter:contrast(21);
+    width: 80%;
+}
+
+.services_container .inner_container .left_area p{
+    color:#B2B5BE;
+    font-weight: 400;
+    line-height: 28px;
+    font-size: 18px;
+    margin-top: 2rem;
+    width: 100%;
+    
+}
+
+.services_container .inner_container .left_area .points_container{
+    width: 80%;
+    min-height: 10vh;
+    height: fit-content;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.services_container .inner_container .left_area .points_container p{
+    margin-top: 1rem;
+    color:#ffffff;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    filter:contrast(21);
+    
+}
+
+.services_container .inner_container .left_area button{
+    width: 50%;
+    height: 3.5rem;
+    border:2px solid rgba(255,255,255,0.1);
+    border-radius: 0.8rem;
+    color:#b4946a;
+    margin-top:3rem;
+    transition:0.3s ease;
+    font-weight: 500;
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.services_container .inner_container .left_area button:hover{
+    border-color: rgba(255,255,255,0.4);
+    color:#c8a67a;
+}
+
+.services_container .inner_container .left_area button:active{
+    transform: scale(95%);
+}
+
+.services_container .inner_container .right_area{
+    width: 25%;
+    height: 70vh;
+    background-image: url('../../../Assets/images/patrika_image.webp');
+    background-position:center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    border:1px solid #b4946a61;
+    border-radius: 24px;
+    margin-right: 5%;
+    box-shadow: rgba(236, 172, 93, 0.13) 0px 8px 24px;
+    color:#b4946a;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+.services_container .inner_container .right_area p{
+    margin-top: 85%;
+}
+
+@media  screen and (max-width:950px) {
+    .services_container{
+        margin-bottom: 3rem;
+    }
+    .services_container .inner_container{
+        width: 96%;
+        padding:1.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 3rem;
+    }
+    .services_container .inner_container .left_area{
+        width: 100%;
+        height: fit-content;
+    }
+    .services_container .inner_container .left_area strong{
+        font-size: 28px;
+        width: 100%;
+    }
+    .services_container .inner_container .left_area p{
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .services_container .inner_container .left_area .points_container{
+        width: 100%;
+        justify-content: flex-start;
+    }
+    .services_container .inner_container .left_area .points_container p{ 
+        margin-top: 0.5rem;
+        font-size: 16px;
+    }
+    .services_container .inner_container .left_area button{
+        width: 100%;
+    }
+
+    .services_container .inner_container .right_area{
+        margin-top: 3rem;
+        width: 100%;
+        height: 55vh;
+        margin-bottom:2rem;
+    }
+  
+}

@@ -1,0 +1,69 @@
+.otpScreen{
+    width:100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+}
+
+.otpFormContainer{
+    width: 25%;
+    height: 60vh;
+    border:1px solid rgba(255,255,255,0.3);
+    border-radius: 0.6rem;
+    margin-top: 8rem;
+    padding: 2.5rem;
+}
+
+.input_container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+}
+
+.input_field{
+    width: 20%;
+    height: 2.4rem;
+    margin: 0.3rem;
+    border-radius: 0.4rem;
+    border: none;
+    padding-left:1rem;
+    font-size: 1.2rem;
+    background-color: rgba(255,255,255,0.2);
+    color:#fff;
+}
+
+
+.OTPVerifyButton{
+    width: 100%;
+    height: 46px;
+    margin-top: 4.5rem;
+    border-radius:0.4rem;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s ease;
+    color:rgba(255,255,255,0.7);
+}
+
+.OTPVerifyButton:hover{
+    border-color: rgba(255, 255, 255, 0.4);
+    color:rgba(255,255,255,0.8);
+}
+
+.OTPVerifyButton:active{
+    transform: scale(95%);
+}
+
+
+/* MOBILE UI RESPONSIVE */
+@media screen and (max-width:950px) {
+    .otpFormContainer{
+        width: 90%;
+        border:none;
+    }
+    .input_field{
+        width: 35%;
+        padding-left: 0;
+    }
+}

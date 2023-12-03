@@ -1,0 +1,33 @@
+.account_info_container{
+    height: fit-content;
+    width: 100%;
+    padding:5%;
+}
+
+.account_info_container h3{
+    font-weight:bolder;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+.details_container{
+    width:100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3%;
+    color:#36454F;
+}
+.profile_info_wrapper{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.profile_info_wrapper .row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}

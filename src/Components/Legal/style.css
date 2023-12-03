@@ -1,0 +1,121 @@
+.legal_container{
+    width: 100%;
+    min-height: 100vh;
+    height: fit-content;
+    padding-bottom: 5rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.legal_container .legal_navbar{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 3rem;
+}
+
+.legal_container strong{
+    margin-top: 5rem;
+}
+
+
+
+.legal_container .legal_navbar img{
+    width: 36px;
+    height: 28px;
+    cursor:pointer;
+}
+
+.legal_container .legal_content_area{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top:1%;
+    color:#131722;
+    
+}
+
+.legal_container .legal_content_area strong{
+    font-size: 54px;
+    width: 60%;
+    font-weight: 600;
+    filter:contrast(17);
+    
+}
+
+.legal_container .legal_content_area p{
+    width: 60%;
+    font-size: 18px;
+    color:#131722;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+.legal_container .legal_content_area p a{
+    color:#2962ff;
+    cursor:pointer;
+}
+
+.legal_container .legal_content_area p a:hover{
+    text-decoration: underline;
+}
+
+.legal_container .legal_content_area .each_content_section{
+    width: 60%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 3.5rem;
+}
+
+.legal_container .legal_content_area .each_content_section h2{
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.legal_container .legal_content_area .each_content_section p{
+    font-size: 18px;
+    color:#131722;
+    font-weight: 500;
+    line-height: 28px;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width:950px) {
+    .legal_container .legal_navbar{
+        padding:0 1rem;
+    }
+    .legal_container strong{
+        margin-top: 3rem;
+    }
+    .legal_container .legal_content_area strong{
+        font-size: 28px;
+        width: 90%;   
+    }
+    .legal_container .legal_content_area p{
+        width: 90%;
+        font-size: 16px;
+    }
+    .legal_container .legal_content_area .each_content_section{
+        width: 90%;
+    }
+    .legal_container .legal_content_area .each_content_section h2{
+        font-size:20px;
+    }
+    .legal_container .legal_content_area .each_content_section p{
+        font-size: 16px;
+    }
+
+}

@@ -1,0 +1,54 @@
+.container_book_session {
+    height: 130vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;;
+}
+
+.book_session_navbar {
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    padding: 10px;
+    padding-left: 24px;
+
+}
+
+.book_session_navbar h2 {
+    color: #171A20;
+    letter-spacing: 4px;
+
+}
+
+.bookSession_logo {
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+        radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+@media screen and (max-width:950px) {
+    .container_book_session {
+        min-height: 80vh;
+        height: fit-content;
+    }
+
+    .book_session_navbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .book_session_navbar p {
+        font-size: 10px;
+        color: gray;
+    }
+
+    .book_session_navbar h2 {
+        font-size: 1.2rem;
+
+    }
+}

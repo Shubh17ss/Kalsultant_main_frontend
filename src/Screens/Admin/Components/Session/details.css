@@ -1,0 +1,98 @@
+.admin_details_container{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0,0,0,1);
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.admin_details_container .crossIcon{
+    position: absolute;
+    top:20px;
+    right:20px;
+    cursor:pointer
+}
+
+.admin_details_container .admin_info_container{
+    width: 100%;
+    height:85vh;
+    
+   
+}
+
+.admin_details_container .admin_info_container .top_area{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    color:#f9f6eef9;
+}
+
+.admin_details_container .admin_info_container .top_area p{
+    min-width: 20%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: #0c0c0c;
+    border-radius: 0.6rem;
+    cursor:pointer;
+    transition: 0.3s ease;
+  
+}
+
+
+/* SECOND AREA BELOW THE TOP AREA */
+
+.admin_details_container .admin_info_container .second_area{
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 60px;
+}
+
+
+.admin_details_container .admin_info_container .second_area .box{
+    width: 48%;
+    height: 90%;
+    border:1px solid rgba(255,255,255,0.1);
+    margin-top: 3rem;
+    border-radius: 0.6rem;
+    padding:2rem;
+}
+
+.admin_details_container .admin_info_container .second_area .box p{
+    font-size: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color:#f9f6ee;
+    margin: 1rem;
+    min-height: 15%;
+    background-color: #0c0c0c;
+    border-radius: 0.6rem;
+    padding-left: 1rem;
+}
+
+.admin_details_container .admin_info_container .second_area .box .GoogleMeetLink{
+    cursor:pointer;
+    transition: 0.3s ease;
+}
+.admin_details_container .admin_info_container .second_area .box .GoogleMeetLink:hover{
+    background-color: #010101;
+}
+.admin_details_container .admin_info_container .second_area .box .GoogleMeetLink:active{
+    transform: scale(95%);
+}

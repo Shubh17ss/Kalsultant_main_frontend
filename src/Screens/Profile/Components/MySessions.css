@@ -1,0 +1,32 @@
+.sessions_container{
+    display: grid;
+    grid-template-columns: repeat(3,30%);
+    grid-auto-rows: fit-Content;
+    grid-column-gap:10px;
+    grid-row-gap:10px;
+    justify-content: center;
+}
+
+.session_container{
+    border:1px solid #d3d3d3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 1.5rem;
+    padding:15px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.session_container p{
+    margin-top: 4%;
+    font-size: .8rem;
+}
+.session_container:hover{
+    background-color: #d3d3d3;
+    transform:translateY(-2%)
+}
+
+.session_invite_link{
+    text-decoration: none;
+    color:#171A20;
+}

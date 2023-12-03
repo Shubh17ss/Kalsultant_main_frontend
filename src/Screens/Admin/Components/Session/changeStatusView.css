@@ -1,0 +1,54 @@
+.changeStatusView{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    top:0;
+    backdrop-filter: blur(10px);
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+    flex-direction: column;
+}
+
+.changeStatusView div{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15%;
+}
+
+.changeStatusView .closeIcon{
+    position: absolute;
+    top:20px;
+    right:20px;
+    transition: 0.3s ease;
+    color:#f9f6eecc;
+    cursor:pointer;
+}
+
+.changeStatusView .closeIcon{
+    color:#f9f6ee;
+}
+
+.changeStatusView button
+{
+    color:#fff;
+    height:46px ;
+    width: 30%;
+    background-color: rgba(81, 80, 80, 0.2);
+    font-size: 16px;
+    border-radius: 0.6rem;
+    transition:0.3s ease;
+}
+
+.changeStatusView button:hover{
+    background-color: rgba(255,255,255,0.15);
+}
+
+.changeStatusView button:active{
+    transform: scale(95%);
+}

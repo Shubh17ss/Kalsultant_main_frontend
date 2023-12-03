@@ -1,0 +1,35 @@
+.timeSlot_container{
+    width:80%;
+    height:fit-content;
+    min-height: 90%;
+    border-radius: 0.6rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    padding:1rem;
+    
+}
+
+.each_slot_wrapper{
+    width:30%;
+    height:46px;
+    border-radius: 0.6rem;
+    background-color: #000;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    color:#f9f6eecc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0.4rem;
+    cursor:pointer;
+}
+.each_slot_wrapper:hover{
+    background-color: #171A20;
+    color:#fff;
+}
+
+@media screen and (max-width:950px) {
+    .timeSlot_container{
+        width: 100%;
+    }
+}

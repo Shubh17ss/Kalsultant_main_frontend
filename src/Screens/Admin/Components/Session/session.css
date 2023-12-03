@@ -1,0 +1,120 @@
+input:focus::-webkit-input-placeholder {
+    color: #f9f6ee76;
+}
+
+.admin_screen .admin_data .header_section .button_container input {
+    background-color: transparent;
+    border: none;
+    width: 80%;
+    margin-left: 1rem;
+    color: #f9f6ee76;
+}
+
+.admin_screen .admin_data .header_section .refresh_icon
+{
+    font-size: 22px;    
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+
+.admin_screen .admin_data .header_section .refresh_icon:hover
+{
+    color:#f9f6ee;
+}
+
+
+.admin_screen .admin_data .header_section .button_container input:focus {
+    color: #f9f6eece;
+}
+
+.admin_screen .admin_data .header_section .refresh_icon:active{
+    transform: scale(90%);
+}
+
+
+
+.session_data_area {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.session_data_area .data_box {
+    width: 95%;
+    height: 90%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.6rem;
+    border-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.session_data_area .data_box .row_heading {
+    width: 100%;
+    height: 6%;
+    background-color: #131315;
+    border-top-right-radius: 0.6rem;
+    border-top-left-radius: 0.6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.2rem 0.5rem;
+}
+
+.session_data_area .data_box .row_heading.row_data{
+    background-color: transparent;
+    color:#f9f6ee;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+#shape_rect {
+    width: 1.8%;
+    height: 80%;
+    border: 1.4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0.4rem;
+    cursor:pointer;
+}
+
+.session_data_area .data_box .row_heading p {
+    font-size: 14px;
+    min-width: 12%;
+    margin-left: 1rem;
+}
+
+
+.session_data_area .data_box .data_rows_container{
+    width: 100%;
+    height: 94%;
+    overflow: scroll;
+    overflow-x: hidden;
+
+}
+
+
+/* CUSTOM SCROLL BAR DESIGN  */
+/* width */
+::-webkit-scrollbar {
+width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+background:#0f0f0f
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #555;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #f9f6eecc;
+}
+
