@@ -24,6 +24,8 @@ export const Home = () => {
         setArea('India');
     }
 
+    const isMobileScreen=window.innerWidth<950?true:false;
+
     return (
         <>
             <Sidebar isOpen={isOpen} toggle={toggle} />
@@ -32,9 +34,10 @@ export const Home = () => {
             <Section1/>
             <Section2/>
             <HIW/>
-            <Review/>
+            {isMobileScreen?  <Review/>:<></>}
             <Services/>
             <Footer />
+          
 
         </>
     )

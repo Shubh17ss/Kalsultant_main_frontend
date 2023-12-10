@@ -95,7 +95,7 @@ export const Review = () => {
         What our clients have to say...
       </motion.strong>
 
-      <Slider {...settings} className='slider_comp' >
+      <div className='slider_comp'>
         {reviewData.map((item, index) => (
           <div className='review_card' key={index}>
             <div className='content_area'>
@@ -112,7 +112,7 @@ export const Review = () => {
           </div>
 
         ))}
-      </Slider>
+      </div>
 
     </div>
 

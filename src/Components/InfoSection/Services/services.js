@@ -8,6 +8,10 @@ export const Services = () => {
 
   const name = localStorage.getItem('userName');
 
+  const handleGetPatrika=()=>{
+    alert("We are working on this product, will notify you when it's done :)");
+  }
+
   return (
     <div className='services_container'>
       <div className='inner_container'>
@@ -53,7 +57,7 @@ export const Services = () => {
               <p style={{ margin: 0, marginLeft: '1.2rem',fontSize:'0.9rem'  }}>Answers to your questions, if any</p>
             </div>
           </div>
-          <button>Get Patrikaa <BsArrowRight style={{ marginLeft: '0.5rem' }} /></button>
+          <button onClick={handleGetPatrika}>Get Patrikaa <BsArrowRight style={{ marginLeft: '0.5rem' }} /></button>
         </div>
 
         <div className='right_area'>

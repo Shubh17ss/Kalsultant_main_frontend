@@ -7,6 +7,8 @@ import {
     SocialIcons, SocialIconLink
 } from './elements'
 
+import logo from '../../Assets/images/KalSultant_website_transparent_logo.webp';
+
 import { animateScroll as scroll } from 'react-scroll';
 
 export const Footer = () => {
@@ -63,7 +65,7 @@ export const Footer = () => {
                     <SocialMedia>
                         <SocialMediaWrap>
                             <SocialLogo to='/' onClick={toggleHome}>
-                                KALSULTANT
+                                <img src={logo}  style={{width:'32px',height:'32px'}}/>
                             </SocialLogo>
                             <WebsiteRights>
                                 KALSULTANT © {new Date().getFullYear()}

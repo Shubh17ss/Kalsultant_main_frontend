@@ -166,7 +166,7 @@ export const PersonalDetails = () => {
                         </div>
 
 
-                        <div className='gender_box' onClick={() => setGender('Male')} style={gender == 'Male' ? { borderColor: '#f9f6eecc', marginTop: '2rem' } : { marginTop: '2rem' }} >
+                        <div className='gender_box' onClick={() => setGender('Male')} style={gender == 'Male' ? { borderColor: '#f9f6eecc', marginTop:isMobileScreen?'2rem':'0rem' } : { marginTop: isMobileScreen?'2rem':'0rem' }} >
                             {
                                 gender !== 'Male' ?
                                     <RadioButtonUncheckedIcon sx={{ fontSize: '16px', color: 'rgba(255,255,255,0.8)' }} />

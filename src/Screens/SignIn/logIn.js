@@ -8,17 +8,21 @@ import { HiMail } from 'react-icons/hi';
 import { FaFacebook } from 'react-icons/fa';
 import axios from 'axios';
 
+
 import {
     signInWithEmailAndPassword,
     GoogleAuthProvider, signInWithPopup, FacebookAuthProvider,
     createUserWithEmailAndPassword,
-    sendEmailVerification, updateProfile
+    sendEmailVerification, updateProfile,browserPopupRedirectResolver
 } from 'firebase/auth'
 import { auth } from '../../Firebase/connection';
 
 import Lottie from 'lottie-react';
 import loading_animation from '../../Assets/images/loading_anim.json';
 
+
+//importing logo
+import logo from '../../Assets/images/KalSultant_website_transparent_logo.webp';
 
 
 export const LogIn = () => {
@@ -59,7 +63,7 @@ export const LogIn = () => {
     const handleGoogleSignIn = async () => {
 
         setLoading(true);
-        signInWithPopup(auth, googleAuthProvider).then(function (result) {
+        signInWithPopup(auth, googleAuthProvider,browserPopupRedirectResolver).then(function (result) {
             let responseData = result._tokenResponse;
             let name = responseData.fullName;
             let email = responseData.email;
@@ -127,6 +131,8 @@ export const LogIn = () => {
 
 
 
+ 
+
 
     const loginUser = () => {
         setLoading(true);
@@ -192,7 +198,7 @@ export const LogIn = () => {
         <>
             <ParticlesBackground />
             <div className='login_logo' onClick={goHome}>
-                <h2>KALSULTANT</h2>
+                <img src={logo} style={{width:'38px',height:'38px'}}/>
             </div>
             {loading ?
                 <div className='loading_container'>

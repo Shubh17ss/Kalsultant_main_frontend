@@ -49,6 +49,7 @@ export const Profile = () => {
     }
 
     const showSessions = () => {
+        console.log('Function hit');
         //implement axios api to get sessions for the userId
         axios.get(`/api/session/getUserSessions?user_id=${userId}`).then((response) => {
             console.log(response.data);
