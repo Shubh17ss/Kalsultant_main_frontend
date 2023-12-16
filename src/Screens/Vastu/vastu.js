@@ -12,7 +12,7 @@ export const Vastu = () => {
 
   return (
     <div className='vastu_screen'>
-      <div className='pricing_navbar_container'>
+      <div className='vastu_navbar'>
         <img src={logo} alt='/' style={{ width: '36px', height: '36px', cursor: 'pointer' }} onClick={() => { navigate('/') }} />
         <h1 style={{ color: '#fff', fontSize: '1.8rem', cursor: 'pointer', marginTop: '1rem' }} className='user_profile_logo' onClick={() => { navigate('/profile', { state: { isBooked: false } }); }}>{userName != null ? userName.charAt(0) : <AiOutlineUser />}</h1>
       </div>

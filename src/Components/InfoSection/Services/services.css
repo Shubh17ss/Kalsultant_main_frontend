@@ -40,7 +40,7 @@
 }
 
 .services_container .inner_container .left_area strong{
-    font-size: 48px;
+    font-size: 44px;
     font-weight: 600;
     filter:contrast(21);
     width: 80%;
@@ -49,10 +49,11 @@
 .services_container .inner_container .left_area p{
     color:#B2B5BE;
     font-weight: 400;
-    line-height: 28px;
+    line-height: 18px;
     font-size: 18px;
     margin-top: 2rem;
     width: 100%;
+    overflow: hidden;
     
 }
 
@@ -89,6 +90,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background-color: transparent;
 }
 
 .services_container .inner_container .left_area button:hover{

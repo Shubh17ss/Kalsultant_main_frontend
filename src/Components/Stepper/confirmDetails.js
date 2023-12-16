@@ -52,9 +52,9 @@ export const ConfirmDetails = () => {
     slotDate = slotDate.split(' ');
 
     const currency = area === 'India' ? "₹" : "$";
-    let amount = area==="India"?1099:14.99;
+    let amount = area === "India" ? 1099 : 14.99;
 
-    
+
     let tax = amount * .025;
     tax = tax.toFixed(2);
     tax = parseFloat(tax);
@@ -182,10 +182,10 @@ export const ConfirmDetails = () => {
                 //here redirect to payment's page (OPTIONAL)   
                 setTimeout(() => {
                     setShowPaymentSection(true);
-                    if(!isMobileScreen)
-                    window.scrollTo(0, 240);
+                    if (!isMobileScreen)
+                        window.scrollTo(0, 240);
                     else
-                    window.scrollTo(0,10);
+                        window.scrollTo(0, 10);
                 }, 1500);
 
             }).catch((error) => {
@@ -209,36 +209,39 @@ export const ConfirmDetails = () => {
                     </>
                     :
                     <div className='confirm_details_container'>
+                        {isMobileScreen ?
+                            <></>
+                            :
+                            <div className='session_benefits'>
+                                <h2>This session will be about your...</h2>
+                                <div className='categories_container'>
+                                    <div className='each_category'>
+                                        <Lottie loop={true} animationData={heartAnimation} style={{ height: '10rem', marginBottom: '4rem', overflow: 'hidden' }} />
+                                        <h1>Relationship</h1>
+                                    </div>
+                                    <div className='each_category'>
+                                        <Lottie loop={true} animationData={careerAnimation} style={{ height: '5rem', overflow: 'hidden' }} />
+                                        <h1>Career</h1>
+                                    </div>
+                                    <div className='each_category'>
+                                        <Lottie loop={true} animationData={moneyAnimation} style={{ height: '7rem', width: '6rem', overflow: 'hidden' }} />
+                                        <h1>Finance</h1>
+                                    </div>
+                                    <div className='each_category'>
+                                        <Lottie loop={true} animationData={healthAnimation} style={{ height: '6rem', overflow: 'hidden' }} />
+                                        <h1>Health</h1>
+                                    </div>
+                                </div>
+                                {!isMobileScreen ?
+                                    <button className='previousBtn' onClick={() => { setActiveStep(activeStep - 1) }}>
+                                        <BsArrowLeft style={{ marginRight: '0.5rem' }} />
+                                        Schedule Session
+                                    </button>
+                                    :
+                                    <></>}
 
-                        <div className='session_benefits'>
-                            <h2>This session will be about your...</h2>
-                            <div className='categories_container'>
-                                <div className='each_category'>
-                                    <Lottie loop={true} animationData={heartAnimation} style={{ height: '10rem', marginBottom: '4rem' }} />
-                                    <h1>Relationship</h1>
-                                </div>
-                                <div className='each_category'>
-                                    <Lottie loop={true} animationData={careerAnimation} style={{ height: '5rem' }} />
-                                    <h1>Career</h1>
-                                </div>
-                                <div className='each_category'>
-                                    <Lottie loop={true} animationData={moneyAnimation} style={{ height: '7rem', width: '6rem' }} />
-                                    <h1>Finance</h1>
-                                </div>
-                                <div className='each_category'>
-                                    <Lottie loop={true} animationData={healthAnimation} style={{ height: '6rem' }} />
-                                    <h1>Health</h1>
-                                </div>
                             </div>
-                            {!isMobileScreen ?
-                                <button className='previousBtn' onClick={() => { setActiveStep(activeStep - 1) }}>
-                                    <BsArrowLeft style={{ marginRight: '0.5rem' }} />
-                                    Schedule Session
-                                </button>
-                                :
-                                <></>}
-
-                        </div>
+                        }
 
                         <div className='session_details'>
                             <h1>Your session</h1>
@@ -291,7 +294,7 @@ export const ConfirmDetails = () => {
                                 </div>
                             </div>
 
-                            <div className='user_details' style={{ border: 'none', height: '6vh', justifyContent: 'space-between', flexDirection: 'row', paddingLeft: '0.8rem' }}>
+                            <div className='user_details' style={{ border: 'none', height: '6vh', justifyContent: 'space-between', flexDirection: 'row', paddingLeft:isMobileScreen?'': '0.8rem' }}>
                                 <button className='bookPayButton' onClick={handleBook} style={failure ? { color: 'crimson' } : {}} disabled={failure || success}>
                                     {Loader ?
                                         <>
@@ -336,7 +339,7 @@ export const ConfirmDetails = () => {
                                     style={{
                                         display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'row',
                                     }}
-                                    onClick={()=>{setActiveStep(activeStep-1)}}
+                                    onClick={() => { setActiveStep(activeStep - 1) }}
                                 >
                                     <BsArrowLeft style={{ color: 'rgba(255,255,255,0.2)', marginRight: '0.5rem' }} />
                                     <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.8rem' }}>Go back</p>

@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
-import { HeroContainer, HeroBg, VideoBg, HeroContent, HeroH1, HeroP, HeroBtnWrapper, ArrowForward, ArrowRight } from './elements'
+import { HeroContainer, HeroBg, VideoBg, HeroContent } from './elements'
 import Wallpaper from '../../Assets/images/kal_home_wallpaper_optimised.webp';
 import './heroSection.css';
 import { SessionContext } from '../../Context/SessionContext';
@@ -78,25 +78,6 @@ export const HeroSection = () => {
                             Get Started
                         </motion.button>
                     </div>
-
-
-                    {/* <HeroH1><label style={{marginRight:'0.2rem'}}>"</label>ASTROLOGY REVEALS THE WILL OF GODS<label style={{marginLeft:'0.25rem'}}>"</label></HeroH1>
-                    {userLoggedIn ?
-                        <HeroP>
-                            Hi, {username[0]}<br /><br />
-                            You can now book a session in 3 simple steps
-                        </HeroP> :
-                        <HeroP>
-                            Your path is illuminated by a roadmap of stars & we are here to guide!
-                        </HeroP>}
-
-                    <HeroBtnWrapper>
-                        <Button2 to="book_session" onMouseEnter={onHover} onMouseLeave={onHover}
-                            primary='true' dark='true'>
-                            Book a session
-                        </Button2>
-
-                    </HeroBtnWrapper> */}
 
 
                 </HeroContent>

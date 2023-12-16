@@ -15,6 +15,10 @@ export const FooterWrap=styled.div`
     justify-content:center;
     align-items:center;
     width:100%;
+
+    @media screen  and (max-width:820px){
+        padding:0;
+    }
    
 `;
 
@@ -28,6 +32,7 @@ export const FooterLinksContainer=styled.div`
     @media screen and (max-width:820px) {
 
         padding-top:32px;
+        width:'100%';
 
     }
 `;
@@ -102,6 +107,7 @@ export const SocialMediaWrap=styled.div`
         @media screen  and (max-width:820px){
 
             flex-direction:column;
+            width:'100%';
         }
 
 `;

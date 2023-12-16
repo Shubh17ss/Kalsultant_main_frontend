@@ -59,6 +59,8 @@
     transition:0.3s ease;
     font-weight: 500;
     font-size: 1.1rem;
+    background-color: transparent;
+    cursor:pointer;
 }
 .heroSection_Content button:hover{
     border-color: rgba(255,255,255,0.4);

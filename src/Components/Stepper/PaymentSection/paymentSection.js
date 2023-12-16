@@ -24,7 +24,7 @@ export const PaymentSection = (props) => {
                     <AiFillHome style={{ fontSize: '16px', marginBottom: '2px', marginRight: '10px' }} />
                     <p>Home</p>
                 </button>
-                <a style={{width:'45%',height:'100%'}} href={props.url} target="_blank">
+                <a style={{width:'45%',height:'100%',textDecoration:'none'}} href={props.url} target="_blank">
                     <button style={{width:'100%',height:'100%'}}>
                         <p>Session Link</p>
                         <AiOutlineLink style={{ fontSize: '16px', marginBottom: '2px', marginLeft: '10px' }} />

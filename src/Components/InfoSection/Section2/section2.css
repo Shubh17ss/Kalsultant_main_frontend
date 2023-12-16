@@ -58,6 +58,12 @@
 }
 
 @media  screen and (max-width:950px) {
+    .section2_container .heading_area{
+        width:90%;
+    }
+    .section2_container img{
+        height: 80vh;
+    }
     .section2_container .heading_area strong{
         font-size: 38px;
     }

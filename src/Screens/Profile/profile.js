@@ -69,32 +69,34 @@ export const Profile = () => {
                     <MobileProfile />
                     :
                     <>
-                        <div className='profile_navbar'>
-                            <div style={{ cursor: 'pointer' }} onClick={() => { navigate('/') }}>
-                                <img src={logo} alt='/' style={{ width: '38px', height: '38px' }} />
+                        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+                            <div className='profile_navbar'>
+                                <div style={{ cursor: 'pointer' }} onClick={() => { navigate('/') }}>
+                                    <img src={logo} alt='/' style={{ width: '38px', height: '38px' }} />
+                                </div>
+                                <button className='profile_logout_button' onClick={showSessions}>
+                                    <p style={{ fontSize: '1rem', fontWeight: '500', }}>Sessions</p>
+                                </button>
+                                <button className='profile_logout_button' onClick={handleLogOut}>
+                                    <p style={{ fontSize: '1rem', fontWeight: '500', }}>Log out</p>
+                                </button>
                             </div>
-                            <button className='profile_logout_button' onClick={showSessions}>
-                                <p style={{ fontSize: '1rem', fontWeight: '500', }}>Sessions</p>
-                            </button>
-                            <button className='profile_logout_button' onClick={handleLogOut}>
-                                <p style={{ fontSize: '1rem', fontWeight: '500', }}>Log out</p>
-                            </button>
-                        </div>
-                        <div className='profile_information_area'>
-                            {sessions.map((item, index) => {
-                                return (
-                                    <div className='session_card'>
-                                        <p style={{ width: '2%' }}>{index + 1}</p>
-                                        <p style={{ width: '15%' }}>{item.firstname} {item.lastname}</p>
-                                        <p style={{ width: '20%' }}>{item.email}</p>
-                                        <p style={{ width: '10%' }}>{item.session_date}</p>
-                                        <p style={{ width: '10%' }}>{item.session_slot}</p>
-                                        <button>Details</button>
-                                        <button style={{ backgroundColor:item.status==="Completed"?'#50C87880':'#0096FF90' }}
-                                            onClick={() => {window.open(item.invite_link,'_blank') }} disabled={item.status==="Completed"?true:false}>{item.status==="Completed"?'Completed':'Join'}</button>
-                                    </div>
-                                )
-                            })}
+                            <div className='profile_information_area'>
+                                {sessions.map((item, index) => {
+                                    return (
+                                        <div className='session_card'>
+                                            <p style={{ width: '2%' }}>{index + 1}</p>
+                                            <p style={{ width: '15%' }}>{item.firstname} {item.lastname}</p>
+                                            <p style={{ width: '20%' }}>{item.email}</p>
+                                            <p style={{ width: '10%' }}>{item.session_date}</p>
+                                            <p style={{ width: '10%' }}>{item.session_slot}</p>
+                                            <button>Details</button>
+                                            <button style={{ backgroundColor: item.status === "Completed" ? '#50C87880' : '#0096FF90' }}
+                                                onClick={() => { window.open(item.invite_link, '_blank') }} disabled={item.status === "Completed" ? true : false}>{item.status === "Completed" ? 'Completed' : 'Join'}</button>
+                                        </div>
+                                    )
+                                })}
+                            </div>
                         </div>
                         <Footer />
                     </>

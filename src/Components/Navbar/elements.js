@@ -7,15 +7,17 @@ export const Nav = styled.nav`
 
     background:${({ ScrollNav }) => (ScrollNav ? 'rgba(0,0,0,0.4)' : 'transparent')};
     height:60px;
-    margin-top:-80px;
+    /* margin-top:-80px; */
     display:flex;
     justify-content:space-around;
     align-items:center;
     font-size:1rem;
-    position:sticky;
-    top:0;
+    position:fixed;
+    top:0;  
     z-index: 10;
     backdrop-filter:blur(20px);
+    overflow:hidden;
+    width:100%;
    
     
     
@@ -102,6 +104,10 @@ export const NavItem = styled.li`
 
     height:100%;
     margin-right:20px;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center
 
 `
 export const NavItem2 = styled.li`
@@ -168,8 +174,8 @@ export const NavLinks3 = styled(LinkR)`
     display:flex;
     justify-content:center;
     align-items:center;
-
-    
+    text-decoration:none;
+   
 `;
 
 

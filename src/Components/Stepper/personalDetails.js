@@ -1,11 +1,9 @@
 import React, { useContext, useState, useEffect } from 'react'
-import axios from 'axios';
 import './stepper.css';
-import { TextField, Box, Button, FormControl, InputLabel, Select, MenuItem, Autocomplete } from '@mui/material';
+import { FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 import { SessionContext } from '../../Context/SessionContext';
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 import CircleIcon from '@mui/icons-material/Circle';
-import birthTimeImg from '../../Assets/images/birthtimeImage.png';
 import { BsArrowRight } from 'react-icons/bs';
 import { SuccessToast } from '../Toast/Toast';
 import { toast } from 'react-toastify';
@@ -166,7 +164,7 @@ export const PersonalDetails = () => {
                         </div>
 
 
-                        <div className='gender_box' onClick={() => setGender('Male')} style={gender == 'Male' ? { borderColor: '#f9f6eecc', marginTop:isMobileScreen?'2rem':'0rem' } : { marginTop: isMobileScreen?'2rem':'0rem' }} >
+                        <div className='gender_box' onClick={() => setGender('Male')} style={gender == 'Male' ? { borderColor: '#f9f6eecc', marginTop: isMobileScreen ? '2rem' : '0rem' } : { marginTop: isMobileScreen ? '2rem' : '0rem' }} >
                             {
                                 gender !== 'Male' ?
                                     <RadioButtonUncheckedIcon sx={{ fontSize: '16px', color: 'rgba(255,255,255,0.8)' }} />
@@ -201,7 +199,7 @@ export const PersonalDetails = () => {
                     </div>
 
 
-                    <div className='input_container birth_container' style={{ marginTop: '40px', height: 'fit-Content',flexDirection:isMobileScreen?'column':'row' }}>
+                    <div className='input_container birth_container' style={{ marginTop: '40px', height: 'fit-Content', flexDirection: isMobileScreen ? 'column' : 'row' }}>
 
                         <div style={isMobileScreen ? { width: '100%', display: 'flex', flexDirection: 'column', paddingLeft: '0.5rem' } : { display: 'flex', flexDirection: 'column', width: '60%' }}>
                             <label className='input_label' style={{ marginBottom: isMobileScreen ? '2%' : '0%', fontSize: '1rem', marginLeft: '2%' }}>When is your birthday?</label>
@@ -255,7 +253,7 @@ export const PersonalDetails = () => {
                         <div style={isMobileScreen ? { width: '100%', display: 'flex', flexDirection: 'column', paddingLeft: '0.5rem', paddingTop: '10%' } : { display: 'flex', flexDirection: 'column', marginLeft: '5%' }}>
 
                             <label className='input_label' style={{ marginBottom: isMobileScreen ? '0%' : '0%', fontSize: '1rem', marginLeft: '2%', width: '100%' }}>What is your time of birth?</label>
-                            <div className='input_container' style={{ marginBottom: '5%', height: '2rem' }}>
+                            <div className='input_container' style={{height: '2rem',overflow:'hidden' }}>
                                 <FormControl style={isMobileScreen ? { width: '40%' } : { width: '50%' }} sx={[{ overflow: 'visible', borderRadius: '0.8rem', border: '1.6px solid rgba(255, 255, 255, 0.1)' }, isMobileScreen ? { margin: '3px' } : { marginRight: '1%' }]} error={e1 ? 'error' : ''} size={'small'}>
                                     <InputLabel id="demo-simple-select-label" sx={{ fontFamily: 'Libre Baskerville, serif', color: '#f9f6eecc' }}>Hour</InputLabel>
                                     <Select
@@ -309,30 +307,18 @@ export const PersonalDetails = () => {
 
 
                     <div className='last_section_button_container'>
-                        <div className='input_container' style={{ marginTop: isMobileScreen ? '5%' : '5%', width:isMobileScreen?'100%':'50%' }}>
+                        <div className='input_container' style={{ marginTop: isMobileScreen ? '5%' : '5%', width: isMobileScreen ? '100%' : '50%' }}>
                             <div className='each_input_field_container' style={{ width: '100%' }}>
                                 <label className='input_label' style={{ marginBottom: '0.5rem', fontSize: '1rem' }}>Please provide your place of birth</label>
                                 <input type='text' value={cityContext} placeholder='City, State, Country' className='input_area_field' onChange={(e) => { setcityContext(e.target.value) }}></input>
                             </div>
                         </div>
-                        <button className='next_button' onClick={handleNext}>
+                        <button className='next_button' onClick={handleNext} style={{marginBottom:'1rem'}}>
                             Schedule Session
                             <BsArrowRight style={{ marginLeft: '0.5rem' }} />
                         </button>
                     </div>
-
-
-
-
-
                 </div>
-
-                {/* <div className='content_container'>
-                       <img src={birthTimeImg} alt=''/>         
-                </div> */}
-
-
-
             </div>
         </>
     )

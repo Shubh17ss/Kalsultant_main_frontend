@@ -33,7 +33,7 @@ export const StepperForm = () => {
 
 
   return (
-    <div style={{width:'80%', height:'100vh',marginTop:'3rem'}}>
+    <div style={{width:'80%', height:'100vh',marginTop:'3rem',overflow:'hidden'}}>
       {loading ?
         <div className='loading_container' style={{border:'none'}}>
           <h5 style={{color:'#f9f6ee',fontSize:'1rem'}}>Checking session availability...</h5>

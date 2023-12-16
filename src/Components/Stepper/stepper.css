@@ -48,6 +48,7 @@
     justify-content: flex-start;
     align-items: center;
     margin-top: 1%;
+    padding:1rem 0;
 }
 
 .each_input_field_container {
@@ -151,6 +152,8 @@ input:focus {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: transparent;
+    cursor:pointer;
 }
 
 .next_button:hover {
@@ -247,19 +250,17 @@ input:focus {
     .input_area_field {
         width: 100%;
         font-size: 0.8rem;
-        padding-left: 0.5rem;
     }
 
     .input_container.gender_container {
         justify-content: center;
-        padding: 0 0.5rem;
-        margin-top: 5%;
+         margin-top: 5%;
         flex-direction: column;
 
     }
 
     .gender_box {
-        width: 100%;
+        width: 90%;
         margin-left: 0.3rem;
 
     }

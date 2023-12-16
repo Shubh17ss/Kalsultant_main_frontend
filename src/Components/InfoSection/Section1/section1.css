@@ -11,12 +11,12 @@
 }
 .section1_container strong{
     font-weight: 600;
-    font-size: 56px;
+    font-size: 44px;
     filter:contrast(21);
     margin-top: 5rem;
 }
 .section1_container p{
-    font-size: 28px;
+    font-size: 18px;
     color:#B2B5BC;
     /* filter:contrast(21); */
     line-height: 40px;
@@ -33,6 +33,7 @@
     transition:0.3s ease;
     font-weight: 500;
     font-size: 1.1rem;
+    background-color: transparent;
 }
 .section1_container button:hover{
     border-color: rgba(255,255,255,0.4);

@@ -219,7 +219,7 @@ export const LogIn = () => {
                                         <p>First name</p>
                                         <input type="text" value={firstName} onChange={(e) => { setFirstName(e.target.value) }} />
                                     </div>
-                                    <div className='input_field2'>
+                                    <div className='input_field2' style={{marginLeft:isMobileScreen?'0.5rem':''}}>
                                         <p>Last name</p>
                                         <input type="text" value={lastName} onChange={(e) => { setLastName(e.target.value) }} />
                                     </div>

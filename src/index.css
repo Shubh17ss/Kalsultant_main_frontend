@@ -1,4 +1,9 @@
-
+*{
+  overflow-x: hidden;
+}
+button{
+  font-family: 'Libre Baskerville', serif;
+}
 html::-webkit-scrollbar{
   width:0.4vw;
 }
