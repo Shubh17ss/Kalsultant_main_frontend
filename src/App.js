@@ -17,6 +17,7 @@ import { SessionProvider } from './Context/SessionContext';
 // import { Otp } from './Screens/SignIn/otp';
 // import { Admin } from './Screens/Admin/admin';
 
+import {CustomBarLoader} from './Components/Loader/Loader';
 
 //lazy load importing
 const Home = lazy(() => import('./DefaultExports/Home'));
@@ -39,7 +40,7 @@ function App() {
   return (
     <Router>
       <SessionProvider>
-        <Suspense fallback={<h1>Loading...</h1>}>
+        <Suspense fallback={<CustomBarLoader/>}>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/admin_panel' element={<Admin />} />

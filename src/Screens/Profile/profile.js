@@ -35,18 +35,12 @@ export const Profile = () => {
 
 
     const handleLogOut = () => {
-        const auth = getAuth();
-        signOut(auth).then(() => {
-            localStorage.removeItem("userAuth");
-            localStorage.removeItem('userName');
-            localStorage.removeItem('userEmail');
-            navigate('/');
-            window.location.reload(false);
-        }).catch((error) => {
-            alert(error.message);
-        })
-
-    }
+        localStorage.removeItem("userAuth");
+        localStorage.removeItem('userName');
+        localStorage.removeItem('userEmail');
+        navigate('/');
+        window.location.reload(false);  
+   }
 
     const showSessions = () => {
         console.log('Function hit');
