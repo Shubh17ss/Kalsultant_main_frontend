@@ -28,10 +28,10 @@ export const HeroSection = () => {
 
     return (
         <>
-            {imageLoading || localImage ?
+            {localImage ?
                 <div className='loading_container_home_page'>
                     <h4 style={{ marginBottom: '1rem' }}>Kalsultant.....Consult your way</h4>
-                    <BarLoader loading={imageLoading || localImage} height={2} color={'#fff'} speedMultiplier={1} />
+                    <BarLoader loading={localImage} height={2} color={'#fff'} speedMultiplier={1} />
                 </div>
                 :
                 <></>

@@ -42,7 +42,7 @@ function App() {
       <SessionProvider>
         <Suspense fallback={<CustomBarLoader/>}>
           <Routes>
-            <Route path='/' element={<Home />} />
+            <Route path='/' element={<Home/>} />
             <Route path='/admin_panel' element={<Admin />} />
             <Route path='/book_session' element={<BookSession />} />
             <Route path='/signIn' element={<LogIn />} />

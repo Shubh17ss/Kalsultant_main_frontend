@@ -20,7 +20,7 @@ export const SmallLoader = () => {
 export const CustomBarLoader = () => {
   return (
     <div  className='barLoaderContainer'>
-      <p style={{color:'rgba(255,255,255,0.8)',marginBottom:'1rem'}}>Loading Content</p>
+      <p style={{color:'rgba(255,255,255,0.8)',marginBottom:'1rem'}}>Unfolding cosmic secrets</p>
       <BarLoader loading={true} height={2} color={'#fff'} speedMultiplier={1} />
     </div>
   )

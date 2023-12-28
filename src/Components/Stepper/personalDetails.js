@@ -149,11 +149,11 @@ export const PersonalDetails = () => {
                     <div className='input_container'>
                         <div className='each_input_field_container nameField'>
                             <label className='input_label'>Your name</label>
-                            <input type='text' value={name} placeholder='' className='input_area_field' onChange={(e) => { setName(e.target.value) }}></input>
+                            <input type='text' value={name} placeholder='' className='input_area_field name_input' onChange={(e) => { setName(e.target.value) }}></input>
                         </div>
                         <div className='each_input_field_container emailField'>
                             <lable className='input_label'>Your Email</lable>
-                            <input type='email' value={email} placeholder='' className='input_area_field' onChange={(e) => { setEmail(e.target.value) }}></input>
+                            <input type='email' value={email} placeholder='' className='input_area_field email_input' onChange={(e) => { setEmail(e.target.value) }}></input>
                         </div>
                     </div>
 

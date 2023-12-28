@@ -241,16 +241,28 @@ input:focus {
 
     .each_input_field_container.nameField {
         width: 40%;
+        padding-right: 0.5rem;
     }
 
     .each_input_field_container.emailField {
-        width: 65%;
+        width: 60%;
+        
     }
 
     .input_area_field {
-        width: 100%;
+        width: 95%;
+        padding: 0 0.5rem;
         font-size: 0.8rem;
     }
+
+    .input_area_field.name_input{
+       border:none;
+      
+    }
+    .input_area_field.email_input{
+        border:none;
+     }
+
 
     .input_container.gender_container {
         justify-content: center;
