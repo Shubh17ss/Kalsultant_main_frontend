@@ -33,6 +33,7 @@ const ForgotPassword = lazy(() => import('./DefaultExports/ForgotPassword'));
 const TermsAndConditions = lazy(() => import('./DefaultExports/TermsAndConditions'));
 const PrivacyPolicy = lazy(() => import('./DefaultExports/PrivacyPolicy'));
 const RefundPolicy = lazy(() => import('./DefaultExports/RefundPolicy'));
+const ContactUs=lazy(()=> import('./DefaultExports/ContactUs'));
 
 
 
@@ -54,7 +55,8 @@ function App() {
             <Route path='/passwordResetAuth' element={<ForgotPassword />} />
             <Route path='/Terms&Conditions' element={<TermsAndConditions />} />
             <Route path='/PrivacyPolicy' element={<PrivacyPolicy />} /> 
-             <Route path='/RefundPolicy' element={<RefundPolicy />} />
+            <Route path='/RefundPolicy' element={<RefundPolicy />} />
+            <Route path='Contact-us' element={<ContactUs/>}/>
           </Routes>
         </Suspense>
       </SessionProvider>

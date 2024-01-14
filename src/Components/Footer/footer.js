@@ -34,38 +34,26 @@ export const Footer = () => {
 
                             <FooterLinkItems>
                                 <FooterLinkTitle>Contact Us</FooterLinkTitle>
-                                <FooterLink to="/signin">Contact</FooterLink>
-                                <FooterLink to="/signin">Support</FooterLink>
-                                <FooterLink to="/signin">Destination</FooterLink>
-                                <FooterLink to="/signin">Sponsorships</FooterLink>
+                                <FooterLink to="/Contact-us">Contact</FooterLink>
+                                <FooterLink to="/Contact-us">Support</FooterLink>
                             </FooterLinkItems>
 
                         </FooterLinksWrapper>
 
                         <FooterLinksWrapper>
                             <FooterLinkItems>
-                                <FooterLinkTitle>Videos</FooterLinkTitle>
-                                <FooterLink to="/signin">Submit Video</FooterLink>
-                                <FooterLink to="/signin">Ambassadors</FooterLink>
-                                <FooterLink to="/signin">Agency</FooterLink>
-                                <FooterLink to="/signin">Trending</FooterLink>
-                                <FooterLink to="/signin">Influencer</FooterLink>
-                            </FooterLinkItems>
-
-                            <FooterLinkItems>
                                 <FooterLinkTitle>Business</FooterLinkTitle>
                                 <FooterLink to="/signin"></FooterLink>
                                 <FooterLink to="/signin">Facebook</FooterLink>
                                 <FooterLink to="/signin">Youtube</FooterLink>
                                 <FooterLink to="/signin">Twitter</FooterLink>
-                                <FooterLink to="/signin">Twitch</FooterLink>
                             </FooterLinkItems>
                         </FooterLinksWrapper>
                     </FooterLinksContainer>
                     <SocialMedia>
                         <SocialMediaWrap>
                             <SocialLogo to='/' onClick={toggleHome}>
-                                <img src={logo}  style={{width:'32px',height:'32px'}}/>
+                                <img src={logo} style={{ width: '32px', height: '32px' }} />
                             </SocialLogo>
                             <WebsiteRights>
                                 KALSULTANT © {new Date().getFullYear()}

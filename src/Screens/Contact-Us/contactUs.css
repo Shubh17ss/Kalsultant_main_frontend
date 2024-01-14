@@ -1,0 +1,103 @@
+.contactUsScreen{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contactUsScreen .goBackArrow{
+    transition: 0.3s ease;
+    border-radius: 50%;
+    padding:0.5rem;
+    cursor:pointer;
+    font-size: 2rem;
+}
+.contactUsScreen .goBackArrow:hover{
+    background-color: rgba(255,255,255,0.15);
+}
+.contactUsScreen .goBackArrow:active{
+    transform:scale(95%);
+}
+
+.contactUsScreen .heading_area{
+    width:50%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactUsScreen .heading_area strong{
+    font-size: 38px;
+    color: #f9f6eef3;
+}
+
+.contactUsScreen .info_area{
+    width: 80%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactUsScreen .info_area .box{
+    width: 30%;
+    height: 30%;
+    background-color: rgba(255,255,255,0.1);
+    margin:1rem;
+    border-radius: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+    transition:0.3s ease;
+}
+
+.contactUsScreen .info_area .box:active{
+    transform:scale(95%);
+}
+
+.contactUsScreen .info_area .box:hover{
+    background-color: rgba(255,255,255,0.08);
+}
+
+.contactUsScreen .info_area p{
+    font-size: 18px;
+    color:#f9f6eef0;
+    letter-spacing: 0.1cm;
+    margin-left:1.5rem;
+
+}
+
+@media screen and (max-width:950px) {
+    
+    .contactUsScreen{
+        justify-content: flex-start;
+        padding-top: 30%;
+    }
+
+    .contactUsScreen .heading_area{
+        height: fit-content;
+        width: 100%;
+        text-align: center;
+    }
+
+    .contactUsScreen .info_area{
+        width: 100%;
+        height: fit-content;
+        flex-direction: column;
+        margin-top: 10%;
+    }
+
+    .contactUsScreen .info_area .box{
+        width: 85%;
+        height:5rem;
+        padding-left: 0.5rem;
+    }
+
+    .contactUsScreen .info_area .box p{
+        min-width: 80%;
+    }
+}
