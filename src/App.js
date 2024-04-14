@@ -51,6 +51,7 @@ function App() {
             <Route path='/profile' element={<Profile />} />
             <Route path='/book_session/checkout' element={<Checkout />} />
             <Route path='/pricing' element={<Pricing />} />
+            <Route path='/checkout' element={<Checkout/>}/>
             <Route path='/Vastu' element={<Vastu />} />
             <Route path='/passwordResetAuth' element={<ForgotPassword />} />
             <Route path='/Terms&Conditions' element={<TermsAndConditions />} />

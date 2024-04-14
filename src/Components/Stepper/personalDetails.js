@@ -7,6 +7,7 @@ import CircleIcon from '@mui/icons-material/Circle';
 import { BsArrowRight } from 'react-icons/bs';
 import { SuccessToast } from '../Toast/Toast';
 import { toast } from 'react-toastify';
+import axios from 'axios';
 
 
 
@@ -15,7 +16,7 @@ export const PersonalDetails = () => {
 
     useEffect(() => {
 
-        console.log("Use effect running");
+        // console.log("Use effect running");
         window.scrollTo(0, 0);
     }, []);
 
@@ -77,6 +78,42 @@ export const PersonalDetails = () => {
     const [data, setData] = useState([]);
     const country = [...new Set(data.map(item => item.country))];
     country.sort();
+
+
+    //handling places api locationiq
+    const [locations, setLocations] = useState([]);
+    const [query, setQuery]=useState("");
+
+    const getCorrectPlaces = async (e) => {
+
+        setQuery(e.target.value);
+
+        if (e.target.value.length<= 2) {
+            setLocations([]);
+            return;
+        }
+        if(e.target.value.length<query.length)return;
+
+        try {
+            const response = await axios.get(
+                `https://api.locationiq.com/v1/autocomplete?key=${process.env.REACT_APP_LOCATIONIQ_TOKEN}&q=${e.target.value}&limit=5&format=json`
+            );
+
+            console.log('Response received is \n');
+            console.log(response.data);
+            setLocations(response.data);
+        }
+        catch (error) {
+            console.log('Error fetching the locations ', error);
+        }
+    }
+
+    const handleLocationSelect = (location) => {
+
+        setcityContext(location);
+        setQuery(location);
+        setLocations([]);
+    }
 
 
     const handleNext = () => {
@@ -253,7 +290,7 @@ export const PersonalDetails = () => {
                         <div style={isMobileScreen ? { width: '100%', display: 'flex', flexDirection: 'column', paddingLeft: '0.5rem', paddingTop: '10%' } : { display: 'flex', flexDirection: 'column', marginLeft: '5%' }}>
 
                             <label className='input_label' style={{ marginBottom: isMobileScreen ? '0%' : '0%', fontSize: '1rem', marginLeft: '2%', width: '100%' }}>What is your time of birth?</label>
-                            <div className='input_container' style={{height: '2rem',overflow:'hidden' }}>
+                            <div className='input_container' style={{ height: '2rem', overflow: 'hidden' }}>
                                 <FormControl style={isMobileScreen ? { width: '40%' } : { width: '50%' }} sx={[{ overflow: 'visible', borderRadius: '0.8rem', border: '1.6px solid rgba(255, 255, 255, 0.1)' }, isMobileScreen ? { margin: '3px' } : { marginRight: '1%' }]} error={e1 ? 'error' : ''} size={'small'}>
                                     <InputLabel id="demo-simple-select-label" sx={{ fontFamily: 'Libre Baskerville, serif', color: '#f9f6eecc' }}>Hour</InputLabel>
                                     <Select
@@ -307,13 +344,31 @@ export const PersonalDetails = () => {
 
 
                     <div className='last_section_button_container'>
-                        <div className='input_container' style={{ marginTop: isMobileScreen ? '5%' : '5%', width: isMobileScreen ? '100%' : '50%' }}>
+                        <div className='input_container' style={{ marginTop: isMobileScreen ? '5%' : '5%', width: isMobileScreen ? '100%' : '50%', display: 'flex', flexDirection: 'column' }}>
                             <div className='each_input_field_container' style={{ width: '100%' }}>
                                 <label className='input_label' style={{ marginBottom: '0.5rem', fontSize: '1rem' }}>Please provide your place of birth</label>
-                                <input type='text' value={cityContext} placeholder='City, State, Country' className='input_area_field' onChange={(e) => { setcityContext(e.target.value) }}></input>
+                                <input type='text' value={query} placeholder='City, State, Country' className='input_area_field' onChange={(e) => { getCorrectPlaces(e) }}></input>
                             </div>
+                            {isMobileScreen ?
+                                <ul style={{ color: '#fff', marginTop: '3%', width: '95%' }}>
+                                    {locations.length != 0 ? locations.map((item, index) => {
+                                        console.log('running ', item);
+                                        return (
+                                            <li style={{ marginTop: '0.4rem', cursor: 'pointer', fontSize: '0.8rem' }} key={index}
+                                                onClick={()=>{handleLocationSelect(`${item.address.name}, ${item.address.city!=null?`${item.address.city},`:''} ${item.address.state!=null?`${item.address.state},`:''} ${item.address.country}` )}}
+                                            >
+                                                {item.address.name}, {item.address.city != null ? `${item.address.city},` : ''} {item.address.state != null ? `${item.address.state},` : ''} {item.address.country}
+                                            </li>
+                                        )
+                                    }) : null}
+                                </ul>
+                                :
+                                <></>
+                            }
+
+
                         </div>
-                        <button className='next_button' onClick={handleNext} style={{marginBottom:'1rem'}}>
+                        <button className='next_button' onClick={handleNext} style={{ marginBottom: '1rem' }}>
                             Schedule Session
                             <BsArrowRight style={{ marginLeft: '0.5rem' }} />
                         </button>
