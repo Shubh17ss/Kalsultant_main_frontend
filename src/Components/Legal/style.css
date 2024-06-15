@@ -8,16 +8,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    scroll-behavior: smooth;
 }
 
 .legal_container .legal_navbar{
-    width: 100%;
+    width: 95%;
     height: 4rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding:0 3rem;
+    margin-top: 1rem;
+}
+
+.legal_container .legal_navbar .logo_image_legal{
+    width: 38px;
+    height:38px;
 }
 
 .legal_container strong{

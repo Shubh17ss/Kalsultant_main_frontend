@@ -39,16 +39,16 @@ export const ContactUs = () => {
             </div>
             <div className='info_area'>
                 <div className='box' onClick={goToWhatsApp}>
-                    <MdOutlineLocalPhone style={{ color: '#f9f6eecc', fontSize: '2rem' }} />
-                    <p>+91-8126464372</p>
+                    <MdOutlineLocalPhone style={{ color: '#f9f6eecc', fontSize: '1.5rem' }} />
+                    <p>Tap to Connect</p>
                 </div>
                 <div className='box' onClick={mailHandler}>
-                    <IoMailOutline style={{ color: '#f9f6eecc', fontSize: '2rem' }} />
-                    <p style={{ letterSpacing: '0.04cm' }}>contact@kalsultant.com</p>
+                    <IoMailOutline style={{ color: '#f9f6eecc', fontSize: '1.5rem' }} />
+                    <p>contact@kalsultant.com</p>
                 </div>
                 <div className='box'>
-                    <IoLocationOutline style={{ color: '#f9f6eecc', fontSize: '2rem' }} />
-                    <p style={{ letterSpacing: '0.04cm' }}>Dehradun, India</p>
+                    <IoLocationOutline style={{ color: '#f9f6eecc', fontSize: '1.5rem' }} />
+                    <p>Dehradun, India</p>
                 </div>
             </div>
         </div>

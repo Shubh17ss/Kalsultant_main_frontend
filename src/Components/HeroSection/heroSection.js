@@ -28,17 +28,9 @@ export const HeroSection = () => {
 
     return (
         <>
-            {localImage ?
-                <div className='loading_container_home_page'>
-                    <h4 style={{ marginBottom: '1rem' }}>Kalsultant.....Consult your way</h4>
-                    <BarLoader loading={localImage} height={2} color={'#fff'} speedMultiplier={1} />
-                </div>
-                :
-                <></>
-            }
             <HeroContainer>
                 <HeroBg>
-                    <VideoBg src={Wallpaper} onLoad={() => { setImageLoading(false); setLocalImage(false) }} />
+                    <VideoBg src={Wallpaper} onLoad={() => { setImageLoading(false); setLocalImage(false) }}  alt='/'/>
                 </HeroBg>
                 <HeroContent>
                     <div className='heroSection_Content'>
