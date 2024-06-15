@@ -9,12 +9,17 @@ export const Section2 = () => {
     const isMobileScreen = window.innerWidth < 950 ? true : false;
     return (
         <div className='section2_container'>
-            <motion.img src={KnowYourself} alt='/'
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: 2.5 }} />
+            {isMobileScreen ?
+                <></> :
+                <motion.img src={KnowYourself} alt='/'
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: 2.5 }}
+                    className='knowYourSelfImage'
+                />
 
+            }
             <div className='content_container'>
                 <div className='heading_area'>
                     <motion.strong
@@ -24,7 +29,7 @@ export const Section2 = () => {
                         transition={{ duration: 0.3, delay: 0.5 }}>
                         Know
                     </motion.strong>
-                    <motion.strong style={{ marginLeft:isMobileScreen?'1rem': '1.8rem' }}
+                    <motion.strong style={{ marginLeft: isMobileScreen ? '1rem' : '1.8rem' }}
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}

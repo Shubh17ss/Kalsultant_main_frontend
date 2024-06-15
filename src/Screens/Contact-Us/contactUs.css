@@ -83,6 +83,11 @@
         width: 100%;
         text-align: center;
     }
+    .contactUsScreen .heading_area strong{
+        font-size: 32px;
+        color: #f9f6eef3;
+        line-height: 3rem;
+    }
 
     .contactUsScreen .info_area{
         width: 100%;
@@ -93,11 +98,19 @@
 
     .contactUsScreen .info_area .box{
         width: 85%;
-        height:5rem;
-        padding-left: 0.5rem;
+        height:4rem;
+        padding-left: 1rem;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        background-color: rgba(255,255,255,0.04);
+        border-radius: 0.5rem;
     }
 
-    .contactUsScreen .info_area .box p{
+    .contactUsScreen .info_area p{
+        font-size: 16px;
         min-width: 80%;
+        color:#f9f6eec5;
+        letter-spacing: 0cm;
     }
 }

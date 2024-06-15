@@ -30,14 +30,16 @@ export const HeroSection = () => {
 
     return (
         <>
+
             {localImage?
                 <CustomBarLoader/>
                 :
                 <></>
             }
+
             <HeroContainer>
                 <HeroBg>
-                    <VideoBg src={Wallpaper} onLoad={() => { setImageLoading(false); setLocalImage(false) }} />
+                    <VideoBg src={Wallpaper} onLoad={() => { setImageLoading(false); setLocalImage(false) }}  alt='/'/>
                 </HeroBg>
                 <HeroContent>
                     <div className='heroSection_Content'>

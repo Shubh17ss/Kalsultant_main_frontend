@@ -133,7 +133,7 @@ export const PrivacyPolicy = () => {
 
 
     const takeToTop = () => {
-        window.scrollTo(0, 0);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
 
@@ -141,7 +141,7 @@ export const PrivacyPolicy = () => {
     return (
         <div className='legal_container'>
             <div className='legal_navbar'>
-                <img src={Kalsultant_logo} alt='/' />
+                <img src={Kalsultant_logo} alt='/'  className='logo_image_legal'/>
                 <AiOutlineClose style={{ fontSize: '32px', cursor: 'pointer' }} onClick={() => { navigate('/'); }} />
             </div>
             <div className='legal_content_area'>
