@@ -5,7 +5,9 @@ import Wallpaper from '../../Assets/images/kal_home_wallpaper_optimised.webp';
 import './heroSection.css';
 import { SessionContext } from '../../Context/SessionContext';
 import { motion } from 'framer-motion';
-import BarLoader from 'react-spinners/BarLoader';
+// import BarLoader from 'react-spinners/BarLoader';
+
+import { CustomBarLoader } from '../Loader/Loader';
 
 export const HeroSection = () => {
 
@@ -28,6 +30,13 @@ export const HeroSection = () => {
 
     return (
         <>
+
+            {localImage?
+                <CustomBarLoader/>
+                :
+                <></>
+            }
+
             <HeroContainer>
                 <HeroBg>
                     <VideoBg src={Wallpaper} onLoad={() => { setImageLoading(false); setLocalImage(false) }}  alt='/'/>
